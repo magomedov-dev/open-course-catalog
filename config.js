@@ -53,7 +53,7 @@ window.CATALOG_CONFIG = {
 
   courses: [
     // ======================
-    // PROGRAMMING
+    // ОСНОВЫ ПРОГРАММИРОВАНИЯ
     // ======================
 
     {
@@ -68,7 +68,7 @@ window.CATALOG_CONFIG = {
     {
       id: "cs106a",
       code: "CS106A",
-      title: "Programming Methodology",
+      title: "Методология программирования",
       org: "Stanford",
       level: "Начальный",
       category: "programming",
@@ -77,7 +77,7 @@ window.CATALOG_CONFIG = {
     {
       id: "cs106b",
       code: "CS106B",
-      title: "Programming Abstractions",
+      title: "Абстракции программирования",
       org: "Stanford",
       level: "Средний",
       category: "programming",
@@ -86,7 +86,7 @@ window.CATALOG_CONFIG = {
     {
       id: "cs61a",
       code: "CS61A",
-      title: "Structure and Interpretation of Computer Programs",
+      title: "Структуры и интерпретации компьютерных программ",
       org: "UC Berkeley",
       level: "Начальный–средний",
       category: "programming",
@@ -95,7 +95,7 @@ window.CATALOG_CONFIG = {
     {
       id: "mit60001",
       code: "6.0001",
-      title: "Introduction to Computer Science and Programming in Python",
+      title: "Введение в информатику и программирование на Python",
       org: "MIT",
       level: "Начальный",
       category: "programming",
@@ -103,13 +103,13 @@ window.CATALOG_CONFIG = {
     },
 
     // ======================
-    // ALGORITHMS
+    // АЛГОРИТМЫ И СТРУКТУРЫ ДАННЫХ
     // ======================
 
     {
       id: "cs61b",
       code: "CS61B",
-      title: "Data Structures",
+      title: "Структуры данных",
       org: "UC Berkeley",
       level: "Средний",
       category: "algorithms",
@@ -118,7 +118,7 @@ window.CATALOG_CONFIG = {
     {
       id: "mit6006",
       code: "6.006",
-      title: "Introduction to Algorithms",
+      title: "Введение в алгоритмы",
       org: "MIT",
       level: "Средний",
       category: "algorithms",
@@ -127,7 +127,7 @@ window.CATALOG_CONFIG = {
     {
       id: "mit-algo-yt",
       code: "6.006 (видео)",
-      title: "Introduction to Algorithms (видеолекции)",
+      title: "Введение в алгоритмы (видеолекции)",
       org: "MIT / YouTube",
       level: "Средний",
       category: "algorithms",
@@ -136,7 +136,7 @@ window.CATALOG_CONFIG = {
     {
       id: "princeton-algs1",
       code: "Algorithms I",
-      title: "Algorithms, Part I",
+      title: "Алгоритмы, часть I",
       org: "Princeton",
       level: "Средний",
       category: "algorithms",
@@ -145,7 +145,7 @@ window.CATALOG_CONFIG = {
     {
       id: "princeton-algs2",
       code: "Algorithms II",
-      title: "Algorithms, Part II",
+      title: "Алгоритмы, часть II",
       org: "Princeton",
       level: "Продвинутый",
       category: "algorithms",
@@ -154,7 +154,7 @@ window.CATALOG_CONFIG = {
     {
       id: "cs170",
       code: "CS170",
-      title: "Efficient Algorithms and Intractable Problems",
+      title: "Эффективные алгоритмы и неразрешимые задачи",
       org: "UC Berkeley",
       level: "Продвинутый",
       category: "algorithms",
@@ -162,13 +162,13 @@ window.CATALOG_CONFIG = {
     },
 
     // ======================
-    // SYSTEMS & ARCHITECTURE
+    // СИСТЕМЫ И АРХИТЕКТУРА
     // ======================
 
     {
       id: "cs61c",
       code: "CS61C",
-      title: "Great Ideas in Computer Architecture",
+      title: "Великие идеи компьютерной архитектуры",
       org: "UC Berkeley",
       level: "Средний",
       category: "systems",
@@ -177,7 +177,7 @@ window.CATALOG_CONFIG = {
     {
       id: "mit6002",
       code: "6.002",
-      title: "Circuits and Electronics",
+      title: "Схемы и электроника",
       org: "MIT",
       level: "Средний",
       category: "systems",
@@ -186,7 +186,7 @@ window.CATALOG_CONFIG = {
     {
       id: "mit601sc",
       code: "6.01SC",
-      title: "Introduction to EE & CS",
+      title: "Введение в электротехнику и информатику",
       org: "MIT",
       level: "Начальный–средний",
       category: "systems",
@@ -195,7 +195,7 @@ window.CATALOG_CONFIG = {
     {
       id: "nand2tetris",
       code: "Nand2Tetris",
-      title: "From Nand to Tetris",
+      title: "От Nand до Тетриса",
       org: "nand2tetris.org",
       level: "Средний",
       category: "systems",
@@ -204,7 +204,7 @@ window.CATALOG_CONFIG = {
     {
       id: "comp-sys-yt",
       code: "Computer Systems",
-      title: "Computer Systems (видеолекции)",
+      title: "Компьютерные системы (видеолекции)",
       org: "YouTube",
       level: "Средний",
       category: "systems",
@@ -213,7 +213,7 @@ window.CATALOG_CONFIG = {
     {
       id: "onurmutlu",
       code: "Onur Mutlu",
-      title: "Computer Architecture Lectures",
+      title: "Лекции по компьютерной архитектуре",
       org: "YouTube / Onur Mutlu",
       level: "Средний–продвинутый",
       category: "systems",
@@ -221,13 +221,13 @@ window.CATALOG_CONFIG = {
     },
 
     // ======================
-    // OPERATING SYSTEMS
+    // ОПЕРАЦИОННЫЕ СИСТЕМЫ
     // ======================
 
     {
       id: "ostep",
       code: "OSTEP",
-      title: "Operating Systems: Three Easy Pieces",
+      title: "Операционные системы: три простых части",
       org: "UW-Madison / Remzi Arpaci-Dusseau",
       level: "Средний",
       category: "os",
@@ -236,7 +236,7 @@ window.CATALOG_CONFIG = {
     {
       id: "cs537",
       code: "CS 537",
-      title: "Operating Systems",
+      title: "Операционные системы",
       org: "UW-Madison",
       level: "Продвинутый",
       category: "os",
@@ -245,7 +245,7 @@ window.CATALOG_CONFIG = {
     {
       id: "mit6s081",
       code: "6.S081",
-      title: "Operating System Engineering",
+      title: "Инженерия операционных систем",
       org: "MIT",
       level: "Продвинутый",
       category: "os",
@@ -254,7 +254,7 @@ window.CATALOG_CONFIG = {
     {
       id: "cs162",
       code: "CS162",
-      title: "Operating Systems and Systems Programming",
+      title: "Операционные системы и системное программирование",
       org: "UC Berkeley",
       level: "Продвинутый",
       category: "os",
@@ -262,13 +262,13 @@ window.CATALOG_CONFIG = {
     },
 
     // ======================
-    // COMPILERS & PROGRAMMING LANGUAGES
+    // ТРАНСЛЯТОРЫ И ЯЗЫКИ ПРОГРАММИРОВАНИЯ
     // ======================
 
     {
       id: "cornell-cs6120",
       code: "CS 6120",
-      title: "Self-guided Graduate Course",
+      title: "Самостоятельный курс магистратуры",
       org: "Cornell",
       level: "Продвинутый",
       category: "compilers",
@@ -277,7 +277,7 @@ window.CATALOG_CONFIG = {
     {
       id: "cornell-cs4120",
       code: "CS 4120",
-      title: "Introduction to Compilers",
+      title: "Введение в трансляторы",
       org: "Cornell",
       level: "Средний",
       category: "compilers",
@@ -286,7 +286,7 @@ window.CATALOG_CONFIG = {
     {
       id: "cmu-compiler",
       code: "15-411",
-      title: "Compiler Design",
+      title: "Проектирование трансляторов",
       org: "CMU",
       level: "Продвинутый",
       category: "compilers",
@@ -294,13 +294,13 @@ window.CATALOG_CONFIG = {
     },
 
     // ======================
-    // DATABASES
+    // БАЗЫ ДАННЫХ
     // ======================
 
     {
       id: "cmu15445",
       code: "15-445",
-      title: "Database Systems",
+      title: "Системы баз данных",
       org: "CMU",
       level: "Продвинутый",
       category: "databases",
@@ -308,8 +308,8 @@ window.CATALOG_CONFIG = {
     },
     {
       id: "cmu15445-fall2024",
-      code: "15-445 (assignments)",
-      title: "Database Systems (assignments)",
+      code: "15-445 (задания)",
+      title: "Системы баз данных (задания)",
       org: "CMU",
       level: "Продвинутый",
       category: "databases",
@@ -318,7 +318,7 @@ window.CATALOG_CONFIG = {
     {
       id: "db-yt",
       code: "DB Systems (видео)",
-      title: "Database Systems (видеолекции)",
+      title: "Системы баз данных (видеолекции)",
       org: "YouTube",
       level: "Средний",
       category: "databases",
@@ -327,7 +327,7 @@ window.CATALOG_CONFIG = {
     {
       id: "stanford-db",
       code: "DB",
-      title: "Databases",
+      title: "Базы данных",
       org: "Stanford",
       level: "Средний",
       category: "databases",
@@ -335,13 +335,13 @@ window.CATALOG_CONFIG = {
     },
 
     // ======================
-    // NETWORKS
+    // СЕТИ
     // ======================
 
     {
       id: "cs144",
       code: "CS144",
-      title: "Introduction to Computer Networking",
+      title: "Введение в компьютерные сети",
       org: "Stanford",
       level: "Продвинутый",
       category: "networks",
@@ -359,7 +359,7 @@ window.CATALOG_CONFIG = {
     {
       id: "cs168",
       code: "CS168",
-      title: "Introduction to the Internet",
+      title: "Введение в интернет",
       org: "UC Berkeley",
       level: "Средний",
       category: "networks",
@@ -367,13 +367,13 @@ window.CATALOG_CONFIG = {
     },
 
     // ======================
-    // DISTRIBUTED SYSTEMS
+    // РАСПРЕДЕЛЁННЫЕ СИСТЕМЫ
     // ======================
 
     {
       id: "mit6824",
       code: "6.824",
-      title: "Distributed Systems",
+      title: "Распределённые системы",
       org: "MIT",
       level: "Продвинутый",
       category: "distributed",
@@ -381,7 +381,7 @@ window.CATALOG_CONFIG = {
     },
     {
       id: "dist-yt",
-      code: "Distributed Systems (видео)",
+      code: "Распределённые системы (видео)",
       title: "Распределённые системы (видеолекции)",
       org: "YouTube",
       level: "Средний",
@@ -391,7 +391,7 @@ window.CATALOG_CONFIG = {
     {
       id: "cs244b",
       code: "CS244B",
-      title: "Distributed Systems",
+      title: "Распределённые системы",
       org: "Stanford",
       level: "Продвинутый",
       category: "distributed",
@@ -399,13 +399,13 @@ window.CATALOG_CONFIG = {
     },
 
     // ======================
-    // MACHINE LEARNING & AI
+    // МАШИННОЕ ОБУЧЕНИЕ И AI
     // ======================
 
     {
       id: "cs229",
       code: "CS229",
-      title: "Machine Learning",
+      title: "Машинное обучение",
       org: "Stanford",
       level: "Продвинутый",
       category: "ml",
@@ -414,7 +414,7 @@ window.CATALOG_CONFIG = {
     {
       id: "cs231n",
       code: "CS231n",
-      title: "Deep Learning for Computer Vision",
+      title: "Глубокое обучение для компьютерного зрения",
       org: "Stanford",
       level: "Продвинутый",
       category: "ml",
@@ -423,7 +423,7 @@ window.CATALOG_CONFIG = {
     {
       id: "cs188",
       code: "CS188",
-      title: "Introduction to Artificial Intelligence",
+      title: "Введение в искусственный интеллект",
       org: "UC Berkeley",
       level: "Средний–продвинутый",
       category: "ml",
@@ -432,7 +432,7 @@ window.CATALOG_CONFIG = {
     {
       id: "fastai",
       code: "fast.ai",
-      title: "Practical Deep Learning for Coders",
+      title: "Практическое глубокое обучение для программистов",
       org: "fast.ai / USF",
       level: "Средний",
       category: "ml",
@@ -441,7 +441,7 @@ window.CATALOG_CONFIG = {
     {
       id: "cs224n",
       code: "CS224N",
-      title: "Natural Language Processing with Deep Learning",
+      title: "Обработка естественного языка с глубоким обучением",
       org: "Stanford",
       level: "Продвинутый",
       category: "ml",
@@ -450,7 +450,7 @@ window.CATALOG_CONFIG = {
     {
       id: "cs25",
       code: "CS25",
-      title: "Transformers United",
+      title: "Трансформеры",
       org: "Stanford",
       level: "Продвинутый",
       category: "ml",
@@ -459,7 +459,7 @@ window.CATALOG_CONFIG = {
     {
       id: "cs236",
       code: "CS236",
-      title: "Deep Generative Models",
+      title: "Глубокие генеративные модели",
       org: "Stanford",
       level: "Продвинутый",
       category: "ml",
@@ -468,7 +468,7 @@ window.CATALOG_CONFIG = {
     {
       id: "berkeley-dl",
       code: "CS182",
-      title: "Deep Neural Networks",
+      title: "Глубокие нейронные сети",
       org: "UC Berkeley",
       level: "Продвинутый",
       category: "ml",
@@ -476,13 +476,13 @@ window.CATALOG_CONFIG = {
     },
 
     // ======================
-    // MATH
+    // МАТЕМАТИКА
     // ======================
 
     {
       id: "mit1801",
       code: "18.01",
-      title: "Single Variable Calculus",
+      title: "Математический анализ (одна переменная)",
       org: "MIT",
       level: "Начальный",
       category: "math",
@@ -491,7 +491,7 @@ window.CATALOG_CONFIG = {
     {
       id: "mit1802",
       code: "18.02",
-      title: "Multivariable Calculus",
+      title: "Математический анализ (множественные переменные)",
       org: "MIT",
       level: "Средний",
       category: "math",
@@ -500,7 +500,7 @@ window.CATALOG_CONFIG = {
     {
       id: "mit1806",
       code: "18.06",
-      title: "Linear Algebra",
+      title: "Линейная алгебра",
       org: "MIT",
       level: "Средний",
       category: "math",
@@ -509,7 +509,7 @@ window.CATALOG_CONFIG = {
     {
       id: "mit18065",
       code: "18.065",
-      title: "Matrix Methods in Data Analysis",
+      title: "Методы матриц в анализе данных",
       org: "MIT",
       level: "Продвинутый",
       category: "math",
@@ -518,7 +518,7 @@ window.CATALOG_CONFIG = {
     {
       id: "boyd-linalg",
       code: "VMLS",
-      title: "Introduction to Applied Linear Algebra",
+      title: "Введение в прикладную линейную алгебру",
       org: "Stanford / Stephen Boyd",
       level: "Средний",
       category: "math",
@@ -527,7 +527,7 @@ window.CATALOG_CONFIG = {
     {
       id: "mit6042",
       code: "6.042",
-      title: "Mathematics for Computer Science",
+      title: "Математика для информатики",
       org: "MIT",
       level: "Средний",
       category: "math",
@@ -536,7 +536,7 @@ window.CATALOG_CONFIG = {
     {
       id: "mit-course18",
       code: "Course 18",
-      title: "Mathematics",
+      title: "Математика",
       org: "MIT / mitsoul.org",
       level: "Все уровни",
       category: "math",
@@ -545,7 +545,7 @@ window.CATALOG_CONFIG = {
     {
       id: "stat110",
       code: "Stat 110",
-      title: "Probability",
+      title: "Теория вероятностей",
       org: "Harvard",
       level: "Средний",
       category: "math",
@@ -590,7 +590,7 @@ window.CATALOG_CONFIG = {
     {
       id: "stanford-playlist",
       code: "Stanford Playlist",
-      title: "Stanford Course Playlist",
+      title: "Плейлист курсов Стэнфорда",
       org: "Stanford / YouTube",
       level: "Все уровни",
       category: "math",
@@ -599,7 +599,7 @@ window.CATALOG_CONFIG = {
     {
       id: "eigensteve",
       code: "Eigensteve",
-      title: "Math & Engineering Playlists",
+      title: "Математика и инженерия (плейлисты)",
       org: "YouTube / Steve Brunton",
       level: "Средний",
       category: "math",
@@ -608,7 +608,7 @@ window.CATALOG_CONFIG = {
     {
       id: "drtrefor",
       code: "DrTrefor",
-      title: "Math & Science Playlists",
+      title: "Математика и наука (плейлисты)",
       org: "YouTube / DrTrefor",
       level: "Все уровни",
       category: "math",
@@ -616,13 +616,13 @@ window.CATALOG_CONFIG = {
     },
 
     // ======================
-    // SECURITY
+    // КИБЕРБЕЗОПАСНОСТЬ
     // ======================
 
     {
       id: "mit6858",
       code: "6.858",
-      title: "Computer Systems Security",
+      title: "Безопасность компьютерных систем",
       org: "MIT",
       level: "Продвинутый",
       category: "security",
@@ -631,7 +631,7 @@ window.CATALOG_CONFIG = {
     {
       id: "pwncollege",
       code: "pwn.college",
-      title: "Cybersecurity",
+      title: "Кибербезопасность",
       org: "pwn.college",
       level: "Все уровни",
       category: "security",
@@ -640,7 +640,7 @@ window.CATALOG_CONFIG = {
     {
       id: "cs253",
       code: "CS 253",
-      title: "Web Security",
+      title: "Безопасность веб-приложений",
       org: "Stanford",
       level: "Продвинутый",
       category: "security",
@@ -649,7 +649,7 @@ window.CATALOG_CONFIG = {
     {
       id: "mit61600",
       code: "6.1600",
-      title: "Applied Cryptography",
+      title: "Прикладная криптография",
       org: "MIT",
       level: "Продвинутый",
       category: "security",
@@ -658,7 +658,7 @@ window.CATALOG_CONFIG = {
     {
       id: "cs155",
       code: "CS155",
-      title: "Computer and Network Security",
+      title: "Безопасность компьютеров и сетей",
       org: "Stanford",
       level: "Продвинутый",
       category: "security",
@@ -667,7 +667,7 @@ window.CATALOG_CONFIG = {
     {
       id: "cs161-sec",
       code: "CS161",
-      title: "Computer Security",
+      title: "Безопасность компьютеров",
       org: "UC Berkeley",
       level: "Продвинутый",
       category: "security",
@@ -675,13 +675,13 @@ window.CATALOG_CONFIG = {
     },
 
     // ======================
-    // AI-ENGINEERING & SOFTWARE ENG
+    // AI-ИНЖЕНЕРИЯ И РАЗРАБОТКА ПО
     // ======================
 
     {
       id: "cs146s",
       code: "CS146S",
-      title: "The Modern Software Developer",
+      title: "Современный разработчик ПО",
       org: "Stanford",
       level: "Продвинутый",
       category: "aieng",
@@ -690,7 +690,7 @@ window.CATALOG_CONFIG = {
     {
       id: "modernswdev",
       code: "Modern Software Dev",
-      title: "The Modern Software Developer",
+      title: "Современный разработчик ПО",
       org: "themodernsoftware.dev",
       level: "Средний",
       category: "aieng",
@@ -698,13 +698,13 @@ window.CATALOG_CONFIG = {
     },
 
     // ======================
-    // PHYSICS
+    // ФИЗИКА
     // ======================
 
     {
       id: "mit801",
       code: "8.01",
-      title: "Classical Mechanics",
+      title: "Классическая механика",
       org: "MIT",
       level: "Начальный",
       category: "physics",
@@ -713,7 +713,7 @@ window.CATALOG_CONFIG = {
     {
       id: "mit802",
       code: "8.02",
-      title: "Electricity and Magnetism",
+      title: "Электричество и магнетизм",
       org: "MIT",
       level: "Средний",
       category: "physics",
@@ -730,7 +730,7 @@ window.CATALOG_CONFIG = {
     },
 
     // ======================
-    // META / CURATED
+    // КУРИРУЕМЫЕ ПРОГРАММЫ
     // ======================
 
     {
@@ -745,7 +745,7 @@ window.CATALOG_CONFIG = {
     {
       id: "30papers",
       code: "30 Papers",
-      title: "30 Papers",
+      title: "30 статей",
       org: "30papers.com",
       level: "Все уровни",
       category: "meta",
