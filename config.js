@@ -29,7 +29,6 @@ window.CATALOG_CONFIG = {
     "math",
     "security",
     "aieng",
-    "meta",
   ],
 
   categories: {
@@ -210,13 +209,22 @@ window.CATALOG_CONFIG = {
       url: "https://github.com/ossu/computer-science",
     },
     {
-      id: "tenfoundation",
-      code: "Тен Фонд",
-      title: "База программиста",
-      org: "Влад Тен / @tenfoundation",
+      id: "modernswdev",
+      code: "Modern Software Dev",
+      title: "The Modern Software Developer",
+      org: "themodernsoftware.dev",
+      level: "Средний",
+      category: "aieng",
+      url: "https://themodernsoftware.dev",
+    },
+    {
+      id: "30papers",
+      code: "30 Papers",
+      title: "30 Papers",
+      org: "30papers.com",
       level: "Все уровни",
       category: "meta",
-      url: "https://youtu.be/fW_imcrTA_c?si=KU0S22DZzgvLN9Dd",
+      url: "https://30papers.com",
     },
     {
       id: "comp-sys-yt",
@@ -280,15 +288,6 @@ window.CATALOG_CONFIG = {
       level: "Все уровни",
       category: "math",
       url: "https://www.3blue1brown.com/#lessons",
-    },
-    {
-      id: "mit-ocw-math",
-      code: "MIT OCW Math",
-      title: "Курсы математики",
-      org: "MIT OpenCourseWare",
-      level: "Все уровни",
-      category: "math",
-      url: "https://ocw.mit.edu/course-lists/scholar-courses/",
     },
     {
       id: "khanacademy",
