@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Каталог открытых курсов</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="cat-wrap">
+            <header class="cat-header">
+                <p class="cat-eyebrow">ОТКРЫТЫЕ КУРСЫ</p>
+                <h1 class="cat-title">Каталог курсов</h1>
+                <p class="cat-sub">
+                    Подборка открытых курсов по Computer Science от MIT,
+                    Stanford, Harvard, UC Berkeley, CMU и других источников,
+                    разложенная по темам.
+                </p>
+                <p class="cat-stats" id="cat-stats"></p>
+            </header>
+
+            <div class="cat-search-row">
+                <input
+                    type="text"
+                    class="cat-search"
+                    id="cat-search"
+                    placeholder="Искать по коду, названию или вузу…"
+                />
+            </div>
+
+            <div class="cat-layout">
+                <nav class="cat-nav" id="cat-nav"></nav>
+                <main class="cat-content" id="cat-content"></main>
+            </div>
+
+            <footer class="cat-footer">
+                Каталог редактируется в файле <code>config.js</code> —
+                добавляйте, убирайте или переименовывайте курсы и категории
+                прямо там.
+            </footer>
+        </div>
+
+        <script src="config.js"></script>
+        <script>
+            (function () {
+                var CONFIG = window.CATALOG_CONFIG;
+                var CATEGORY_ORDER = CONFIG.categoryOrder;
+                var CATEGORIES = CONFIG.categories;
+                var COURSES = CONFIG.courses;
+
+                var navEl = document.getElementById("cat-nav");
+                var contentEl = document.getElementById("cat-content");
+                var statsEl = document.getElementById("cat-stats");
+                var searchEl = document.getElementById("cat-search");
+
+                var search = "";
+
+                function escapeHtml(s) {
+                    return String(s).replace(/[&<>"']/g, function (c) {
+                        return {
+                            "&": "&amp;",
+                            "<": "&lt;",
+                            ">": "&gt;",
+                            '"': "&quot;",
+                            "'": "&#39;",
+                        }[c];
+                    });
+                }
+
+                function matchesSearch(course, q) {
+                    if (!q) return true;
+                    q = q.toLowerCase();
+                    return (
+                        (course.code + " " + course.title + " " + course.org)
+                            .toLowerCase()
+                            .indexOf(q) !== -1
+                    );
+                }
+
+                var categoryCount = CATEGORY_ORDER.filter(function (k) {
+                    return COURSES.some(function (c) {
+                        return c.category === k;
+                    });
+                }).length;
+                statsEl.textContent =
+                    COURSES.length +
+                    " курсов · " +
+                    categoryCount +
+                    " категорий";
+
+                function render() {
+                    var navHtml = "";
+                    var contentHtml = "";
+                    var anyVisible = false;
+
+                    CATEGORY_ORDER.forEach(function (catKey) {
+                        var meta = CATEGORIES[catKey];
+                        if (!meta) return;
+
+                        var catCourses = COURSES.filter(function (c) {
+                            return c.category === catKey;
+                        });
+                        if (!catCourses.length) return;
+
+                        var filtered = catCourses.filter(function (c) {
+                            return matchesSearch(c, search);
+                        });
+
+                        navHtml +=
+                            '<a class="cat-nav-item" href="#cat-' +
+                            catKey +
+                            '" data-nav="' +
+                            catKey +
+                            '" style="' +
+                            (filtered.length ? "" : "opacity:0.35") +
+                            '">';
+                        navHtml +=
+                            '<span class="cat-nav-dot" style="background:' +
+                            meta.color +
+                            '"></span>';
+                        navHtml +=
+                            '<span class="cat-nav-name">' +
+                            escapeHtml(meta.name) +
+                            "</span>";
+                        navHtml +=
+                            '<span class="cat-nav-count">' +
+                            filtered.length +
+                            "</span>";
+                        navHtml += "</a>";
+
+                        if (!filtered.length) return;
+                        anyVisible = true;
+
+                        contentHtml +=
+                            '<section class="cat-section" id="cat-' +
+                            catKey +
+                            '">';
+                        contentHtml += '<div class="cat-section-head">';
+                        contentHtml +=
+                            '<div class="cat-section-tab" style="background:' +
+                            meta.color +
+                            '"></div>';
+                        contentHtml +=
+                            '<div class="cat-section-name">' +
+                            escapeHtml(meta.name) +
+                            "</div>";
+                        contentHtml +=
+                            '<div class="cat-section-count">' +
+                            filtered.length +
+                            "</div>";
+                        contentHtml += "</div>";
+
+                        contentHtml += '<div class="cat-cards">';
+                        filtered.forEach(function (c) {
+                            contentHtml += '<div class="cat-card">';
+                            contentHtml +=
+                                '<div class="cat-card-code">' +
+                                escapeHtml(c.code) +
+                                "</div>";
+                            contentHtml += '<hr class="cat-card-rule" />';
+                            contentHtml +=
+                                '<div class="cat-card-title">' +
+                                escapeHtml(c.title) +
+                                "</div>";
+                            contentHtml +=
+                                '<div class="cat-card-meta"><span>' +
+                                escapeHtml(c.org) +
+                                "</span><span>" +
+                                escapeHtml(c.level) +
+                                "</span></div>";
+                            contentHtml +=
+                                '<a class="cat-card-link" href="' +
+                                escapeHtml(c.url) +
+                                '" target="_blank" rel="noopener noreferrer">Открыть курс →</a>';
+                            contentHtml += "</div>";
+                        });
+                        contentHtml += "</div>";
+                        contentHtml += "</section>";
+                    });
+
+                    navEl.innerHTML = navHtml;
+                    contentEl.innerHTML = anyVisible
+                        ? contentHtml
+                        : '<div class="cat-empty">Ничего не найдено по этому запросу.</div>';
+
+                    navEl.querySelectorAll("[data-nav]").forEach(function (el) {
+                        el.addEventListener("click", function (e) {
+                            e.preventDefault();
+                            var target = document.getElementById(
+                                "cat-" + el.getAttribute("data-nav"),
+                            );
+                            if (target)
+                                target.scrollIntoView({
+                                    behavior: "smooth",
+                                    block: "start",
+                                });
+                        });
+                    });
+
+                    setupActiveNav();
+                }
+
+                var observer = null;
+                function setupActiveNav() {
+                    if (observer) observer.disconnect();
+                    var sections = contentEl.querySelectorAll(".cat-section");
+                    if (!sections.length || !("IntersectionObserver" in window))
+                        return;
+
+                    observer = new IntersectionObserver(
+                        function (entries) {
+                            entries.forEach(function (entry) {
+                                if (!entry.isIntersecting) return;
+                                var id = entry.target.id.replace("cat-", "");
+                                navEl
+                                    .querySelectorAll(".cat-nav-item")
+                                    .forEach(function (el) {
+                                        el.classList.toggle(
+                                            "is-active",
+                                            el.getAttribute("data-nav") === id,
+                                        );
+                                    });
+                            });
+                        },
+                        { rootMargin: "-10% 0px -70% 0px", threshold: 0 },
+                    );
+
+                    sections.forEach(function (s) {
+                        observer.observe(s);
+                    });
+                }
+
+                searchEl.addEventListener("input", function (e) {
+                    search = e.target.value;
+                    render();
+                });
+
+                render();
+            })();
+        </script>
+    </body>
+</html>
